@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tratamento de Erro</title>
+</head>
+<body>
+    <script>
+
+        // ReferenceError -- valor não definido.
+
+        // let x;
+
+        // try{
+        //     x = y + 1;
+        // } catch(error){
+        //     console.log("name" + error.name);
+        //     console.log("message" + error.message);
+        // }
+
+
+        // SyntaxError -- erro de escrita do coamando.
+
+        // try{
+        //     eval("alert('hello)") // evall executa um código em js
+        // } catch(e){ // essa variavel é utilizada para mostrar abaixo o nome do erro e a mensagem.
+        //     console.log('name' + e.name);
+        //     console.log('message' + e.message);
+        // }
+
+        // TypeError -- erro tipo de dados
+
+            // let n = 1;
+        
+        // try{
+        //     n.toUpperCase();
+        //  } catch(error){
+        //      console.log("name" + error.name);
+        //      console.log("message" + error.message);
+        // }
+
+        // function UserException(message){
+        //     this.message = message;
+        //     this.name = "UserException"
+        // }
+
+        // try{
+        //     let numero = -6;
+        //     if(numero < 0){
+        //         throw new UserException(" O numero deve ser positivo");
+        //     }
+        //     console.log('ok');
+        //  } catch(error){
+        //      console.log("name" + error.name); //UserException
+        //      console.log("message" + error.message); // O numero deve ser positivo
+        // }
+
+
+
+
+
+
+
+
+        var num; // Máximo 10
+
+        try{ // (try) Onde fica o código que é passivel de erro 
+            num=parseFloat(prompt('Digite um Valor'));
+
+            if(num>10){
+                throw new Error('Valor inválido, o valor deve ser menor ou igual a 10<br>');
+            }
+            document.write('Valor: ' + num);
+
+             // (catch)error é a variavel que vai armazenar o obejto do erro, aqui tambem é onde é feito o tratamento do erro.
+        }catch(error){ 
+                    document.write('Erro: ' + error.message);
+                }
+
+                // Existe tambem o finaly que executa o código mesmo no Erro.
+
+    </script>
+</body>
+</html>
