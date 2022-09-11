@@ -19,10 +19,10 @@
         bag1.unshift("Notbook");
         bag1.unshift("Aple");
 
-        bag1.push("Pen");
-        bag1.push("Eraser");
-        bag1.push("Notbook");
-        bag1.push("Cel phone"); 
+        bag2.push("Pen");
+        bag2.push("Eraser");
+        bag2.push("Notbook");
+        bag2.push("Cel phone"); 
 
         bags = bag1.concat(bag2);
 
@@ -30,7 +30,13 @@
 
         itensbag=bags.join();
 
-        document.write(bags);
+        document.write(bags + "<br>");
+
+        document.write("Tamanho da primeira bag: " + bag1.length + "<br>");
+
+        document.write("Tamanho da segunda bag: " + bag2.length + "<br>");
+
+        document.write("Tamanho da bag total: " + bags.length + "<br>");
 
     </script>
 </body>
