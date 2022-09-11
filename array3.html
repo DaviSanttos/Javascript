@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>concatenar arrays</title>
+</head>
+<body>
+    <script>
+        // MÉTODO DA CLASSE ARRAY
+
+        // concat concatena arrays(junta um array com o outro)
+
+        var bags= [] ,bag1=[],bag2=[];
+
+        bag1.unshift("Control Remote");
+        bag1.unshift("Pencil");
+        bag1.unshift("Notbook");
+        bag1.unshift("Aple");
+
+        bag1.push("Pen");
+        bag1.push("Eraser");
+        bag1.push("Notbook");
+        bag1.push("Cel phone"); 
+
+        bags = bag1.concat(bag2);
+
+        var itensbag;
+
+        itensbag=bags.join();
+
+        document.write(bags);
+
+    </script>
+</body>
+</html>

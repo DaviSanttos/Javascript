@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        
+        // MÉTODOS DA CLASSE ARRAY
+
+        // push adiciona itens no icnio do array
+        // unshift adidcion itens no inicio do array
+        // pop remove o ultimo iten do array 
+        // shift remove o primeito iten do array 
+        // splice remove mais de um iten de um array(OU UM ITEN SELECIONADO)
+        
+        // indexOf retorna a posião do iten do array
+        // length retorna a quantidade de itens de um array ou a quantidade de caracteres de um string
+
+        var cor=[],pos;
+
+        for(i = 0; i < 3; i ++ ){
+            cor.push(prompt("Digite uma cor: "));
+            alert(cor[i]);
+            var tamanho = cor.length;
+        }
+        window.alert(tamanho);
+        pos = (cor.indexOf("Azul"));
+
+        if(pos == -1){
+            window.alert("Este iten não está no array");
+        }else{
+            window.alert("A posião deste iten é " + pos);
+        }
+    </script>
+</body>
+</html>
