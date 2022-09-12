@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>querySelectorAll</title>
+    <style>
+        .titulo{
+            color: blue;
+            font-size: 30px;
+            display: inline-block;
+        }
+
+        div{
+            border: 1px solid black;
+            display: inline-block;
+            padding: 10px;
+        }
+
+        a{
+            display: block;
+        }
+
+        .quadro{
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="titulo">querySelectorAll</h1>
+    <p>O querySelectorAll() é um método que retorna os elementos do documento que corresponde a um classe de CSS ou a um tag específica.</p>
+    <h2 class="titulo">Javascript</h2>
+    <p>www.yutube.com</p>
+    <div>
+        <h3>Aqui é Fera</h3>
+        <p>Este texto está dentro de uma div</p>
+        <p>Este também</p>
+    </div>
+
+    <div class="quadro">
+        <h3>Aqui é Fera</h3>
+        <p>Este texto está dentro de uma div</p>
+        <p>Este também</p>
+    </div>
+
+    <a href="https://www.youtube.com/?hl=pt-br"> Yutube</a>
+    <a href="https://github.com/DaviSanttos/Javascript/tree/main/JS"> Repositório JS</a>
+    <hr>
+    <script>
+            // querySelectorAll
+
+            // seleção de tags
+
+            var ps=document.querySelectorAll("p");
+            document.write(ps[0].innerHTML + "<br> <hr>");
+            ps[0].style.color="red";
+
+            // seleção por classe
+
+            var ele=document.querySelectorAll(".titulo");
+            for(i=0;i<ele.length;i++){
+                document.write(ele[i].innerHTML+ "<br>");
+            }
+
+            // seleção de uma tag com classe
+
+            // var elem=document.querySelectorAll("p.titulo");
+            // document.write(elem[0].innerHTML+ "<br>");
+
+            // seleção de uma tag filha dentro de uma tag pai
+
+            // var dividida=document.querySelectorAll("div > p");
+            // for(i=0;i<dividida.length;i++){
+            // dividida[i].style.color="green";
+
+            // seleção de uma div com classe e elemento
+
+            var cr=document.querySelectorAll("div.quadro > p")
+            for(i=0;i<cr.length;i++){
+            cr[i].style.color="blue";
+        }
+    </script>
+</body>
+</html>

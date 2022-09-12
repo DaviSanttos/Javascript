@@ -21,7 +21,7 @@
         // }
 
 
-        // SyntaxError -- erro de escrita do coamando.
+        // SyntaxError -- erro de escrita do comando.
 
         // try{
         //     eval("alert('hello)") // evall executa um código em js
@@ -57,18 +57,10 @@
         //      console.log("message" + error.message); // O numero deve ser positivo
         // }
 
-
-
-
-
-
-
-
         var num; // Máximo 10
 
         try{ // (try) Onde fica o código que é passivel de erro 
             num=parseFloat(prompt('Digite um Valor'));
-
             if(num>10){
                 throw new Error('Valor inválido, o valor deve ser menor ou igual a 10<br>');
             }
@@ -77,6 +69,8 @@
              // (catch)error é a variavel que vai armazenar o obejto do erro, aqui tambem é onde é feito o tratamento do erro.
         }catch(error){ 
                     document.write('Erro: ' + error.message);
+                    console.log("name"+error.name);
+                    console.log("message"+ error.message);
                 }
 
                 // Existe tambem o finaly que executa o código mesmo no Erro.
