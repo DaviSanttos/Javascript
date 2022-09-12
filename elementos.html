@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando elementos HTML COM JS</title>
+</head>
+<body>
+    <p id="name">
+        DAVI CELSO DA SILVA SANTOS
+    </p>
+
+    <div id="caixa"></div>
+
+    <br><hr>
+
+    <p id="name2">JULIA MARIANA</p>
+
+    <input type="text" id="cxtexto" value="HELLO">
+       
+    <br><hr> 
+
+    <p>Olá</p>
+    <p>Davi</p>
+    <p>Ex getElementByTagName</p>
+    <p>www.globo.com</p>
+    <p>www.yutube.com</p>
+
+    <hr>
+
+    <script>
+        // document.getelementById
+
+        var nome = document.getElementById("name");
+        nome.style.fontSize="50px";
+        nome.style.color="red";
+
+        var cx = document.getElementById("caixa");
+        cx.style.border="1px solid black"
+        cx.style.width="200px";
+        cx.style.height="200px";
+        cx.style.backgroundColor="gray";
+
+        const cxt= document.getElementById("cxtexto").value="Alteração por js";
+
+        const nome2=document.getElementById("name2").innerHTML="Alteração Por innerHTML"
+        // alert(nome2);
+        // fim getElementById
+
+        // getElementByTagName - retorna um conjunto de elementos de uma mesma tag, armazena em forma de vetor com inicio em indice 0.
+
+        var tagsP=document.getElementsByTagName("p"); // Aqui essa variavel esta recebendo todas as tags p do código. mas é possível armazenar apenas um valor buscando o pelo indice: Exemplo ("p")[2]; -- aqui a variavel ira armazenar apenas o valor deste indice.
+
+        // para capturar todas as tags da página basta usar * no lugar da tag.
+
+        document.write(tagsP[2].innerHTML + "<br>");
+        document.write(tagsP[3].innerHTML + "<br>");
+        document.write(tagsP[4].innerHTML + "<br>");
+        document.write(tagsP[5].innerHTML + "<br>");
+        // fim getElementByTagName
+
+        // querySelectorAll
+
+        
+    </script>
+</body>
+</html>
